@@ -60,18 +60,18 @@ var Game = {
 		// this.processUpdateTotalGuesses();
 	},
 
-	// playerGuess: function(){
-	// 	inquirer.prompt([
-	// 			{
-	// 				type: 'input',
-	// 				message: 'Guess a letter!',
-	// 				name: 'letter'
-	// 			}
-	// 		]).then(function(player){
-	// 			this.playerInput = player.letter;
-	// 			console.log('Letter guessed: ' + this.playerInput);
-	// 		})
-	// }
+	playerGuess: function(){
+		inquirer.prompt([
+				{
+					type: 'input',
+					message: 'Guess a letter!',
+					name: 'letter'
+				}
+			]).then(function(player){
+				this.playerInput = player.letter;
+				console.log('\nLetter guessed: ' + this.playerInput + '\n');
+			})
+	}
 
 
 }; //end of Game object
@@ -81,4 +81,4 @@ Game.displayInstructions();
 
 Game.setupGame();
 
-// Game.playerGuess();
+Game.playerGuess();
