@@ -1,0 +1,3 @@
+var checkInput = function(letter){
+
+}
