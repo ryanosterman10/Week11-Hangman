@@ -1,6 +1,6 @@
 // will randomly select a word for the player
 
-var Game = {
+exports.game = {
 
 	nflTeams: [
 		'bears',
@@ -38,31 +38,25 @@ var Game = {
 	],
 
 	instructions: '\n---------- NFL HANGMAN ---------- \n\nType a letter and see if you can guess the NFL team name!(not the city)\n',
+
 	wordInPlay: null,
-	lettersOfTheWord : [],
-	matchedLetters: [],
-	guessedLetters: [],
-	guessesLeft: 0,
-	totalGuesses: 0,
-	letterGuessed: null,
-	wins: 0,
+
+	numGuesses: 5,
 
 	displayInstructions: function(){
 		console.log(this.instructions);
 	},
 
-	setupGame: function(){
+	getRandomTeam: function(){
 		var choice = (Math.floor(Math.random()*32) + 1);
 		this.wordInPlay = this.nflTeams[choice];
-		console.log(this.wordInPlay + '\n');
-		this.lettersOfTheWord = this.wordInPlay.split('');
-		// this.rebuildWordView();
-		// this.processUpdateTotalGuesses();
+		return this.wordInPlay;
+		// console.log(this.wordInPlay + '\n');
 	}
 
-}; //end of Game object
+}; //end of game object
 
 
-Game.displayInstructions();
+// game.displayInstructions();
 
-Game.setupGame();
+// game.getRandomTeam();
