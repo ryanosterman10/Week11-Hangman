@@ -1,4 +1,4 @@
-var inquirer = require('inquirer');
+// will randomly select a word for the player
 
 var Game = {
 
@@ -58,21 +58,7 @@ var Game = {
 		this.lettersOfTheWord = this.wordInPlay.split('');
 		// this.rebuildWordView();
 		// this.processUpdateTotalGuesses();
-	},
-
-	playerGuess: function(){
-		inquirer.prompt([
-				{
-					type: 'input',
-					message: 'Guess a letter!',
-					name: 'letter'
-				}
-			]).then(function(player){
-				this.playerInput = player.letter;
-				console.log('\nLetter guessed: ' + this.playerInput + '\n');
-			})
 	}
-
 
 }; //end of Game object
 
@@ -80,5 +66,3 @@ var Game = {
 Game.displayInstructions();
 
 Game.setupGame();
-
-Game.playerGuess();
