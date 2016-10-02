@@ -15,3 +15,5 @@ var wrongGuesses = [];
 for (var i=0; i < numBlanks; i++){
 	blanksAndSuccesses.push("_");
 }
+
+console.log(blanksAndSuccesses);

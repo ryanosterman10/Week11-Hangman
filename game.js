@@ -56,7 +56,3 @@ exports.game = {
 
 }; //end of game object
 
-
-// game.displayInstructions();
-
-// game.getRandomTeam();
