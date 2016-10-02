@@ -19,4 +19,6 @@ var game = require('./game.js');
 		})
 	}
 
+console.log(game.game.instructions);
+
 playerGuess();

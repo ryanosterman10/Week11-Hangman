@@ -2,7 +2,7 @@
 
 var game = require('./game.js');
 
-var nflWord = game.game.setUpGame();
+var nflWord = game.game.getRandomTeam();
 
 var nflAnswer = nflWord.split('');
 
