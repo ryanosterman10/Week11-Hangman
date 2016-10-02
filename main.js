@@ -10,14 +10,14 @@ var nflAnswer = game.game.getRandomTeam().split('');
 var numBlanks = nflAnswer.length;
 
 var blanksAndSuccesses = [];
-
+var numGuesses = 5;
 var wrongGuesses = [];
 
 for (var i=0; i < numBlanks; i++){
 	blanksAndSuccesses.push("_");
 }
 
- var playerGuess = function(){
+function playerGuess(){
 		inquirer.prompt([
 			{
 				type: 'input',
@@ -35,7 +35,6 @@ for (var i=0; i < numBlanks; i++){
 					}
 				}
 				else if(nflAnswer.indexOf(player.letter) == -1){
-					console.log("You have: " + game.game.numGuesses + " guesses remaining\n")
 					console.log(blanksAndSuccesses.join(' '));
 					numGuesses--;
 					playerGuess();
@@ -51,8 +50,10 @@ for (var i=0; i < numBlanks; i++){
 
 console.log(game.game.instructions);
 
-console.log("You have: " + game.game.numGuesses + " guesses remaining\n");
+console.log("You have: " + game.game.numGuesses + " guesses\n");
 
 console.log(blanksAndSuccesses + "\n");
 
 playerGuess();
+
+// console.log(nflAnswer);
