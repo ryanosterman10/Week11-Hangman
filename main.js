@@ -41,7 +41,7 @@ function playerGuess(){
 				}	
 			}
 			else{
-				console.log("LOSER!");
+				console.log("LOSER! The answer was: " + nflAnswer);
 			}
 			// this.playerInput = player.letter;
 			// console.log('\nLetter guessed: ' + this.playerInput + '\n');
